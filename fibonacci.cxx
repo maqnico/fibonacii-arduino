@@ -1,17 +1,21 @@
 #define SMALL 250
 #define BIG 1000
-int counter = 0
+int fibA = 0;
+int fibB = 1;
+counter1 = 0;
 
 void setup(){
     pinMode(13, OUTPUT);
 }
 
 void loop(){
-    for(int i= 0, i < fibonacci(counter), i = i +1){
+    int counter2 = 0;
+    counter = fibonacci(fibA, fibB);
+    for(int i= 0, i < counter, i = i +1){
         blink();
     }
     delay(BIG);
-    counter = fibonacci(counter);
+    counter1 = counter1 + 1;
 }
 
 void blink(){
@@ -26,5 +30,7 @@ int fibonacci (int a, int b){
        break;
     }
     a = a + b
+    fibA = a;
+    fibB = b;
     fibonacci(b,a)
 }
